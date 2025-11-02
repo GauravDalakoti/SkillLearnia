@@ -316,10 +316,10 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                                 ) : (
                                     <>
                                         <video className="w-full sm:w-72 h-48 rounded-lg" controls>
-                                            <source src={lecture.lecture?.startsWith("http://") ? lecture.lecture : URL.createObjectURL(lecture.file)} type="video/mp4" />
+                                            <source src={lecture.lecture?.startsWith("https://") ? lecture.lecture : URL.createObjectURL(lecture.file)} type="video/mp4" />
                                         </video>
 
-                                        {lecture.lecture?.startsWith("http://") ?
+                                        {lecture.lecture?.startsWith("https://") ?
                                             <div className="flex flex-col gap-3 mt-4 w-full sm:w-auto">
                                                 <label
                                                     htmlFor={`replace-${lecture._id}`}

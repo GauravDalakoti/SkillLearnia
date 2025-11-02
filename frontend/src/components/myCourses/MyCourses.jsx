@@ -85,12 +85,12 @@ const MyCourses = () => {
 
                 {/* Footer */}
                 <div className="flex items-center justify-between px-4 pb-4">
-                  
-                  {/* ✅ Completed Badge */}
-                  {course.status === 'completed' && (
+
+                  {/* ✅ Status Badge */}
+                  {course.status === 'completed' ? (
                     <div className="flex items-center gap-2 bg-green-100 text-green-700 text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
                       <svg
-                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns="https://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={2}
@@ -105,7 +105,26 @@ const MyCourses = () => {
                       </svg>
                       Completed
                     </div>
+                  ) : (
+                    <div className="flex items-center gap-2 bg-yellow-100 text-yellow-700 text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                      <svg
+                        xmlns="https://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="w-4 h-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M12 9v3.75m0 3.75h.007v.008H12v-.008z"
+                        />
+                      </svg>
+                      Pending
+                    </div>
                   )}
+
 
                   {/* Start Button */}
                   <button
