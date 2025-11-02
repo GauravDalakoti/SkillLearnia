@@ -19,7 +19,7 @@ export const createCheckoutSession = asyncHandler(async (req, res) => {
         const { courseId } = req.body
 
         console.log(courseId);
-        
+
 
         const course = await Course.findById(courseId);
 
@@ -88,8 +88,8 @@ export const createCheckoutSession = asyncHandler(async (req, res) => {
 
 export const stripeWebhook = asyncHandler(async (req, res) => {
     let event;
-  console.log("web hook working");
-  
+    console.log("web hook working");
+
     try {
         const payloadString = JSON.stringify(req.body, null, 2);
         const secret = process.env.WEBHOOK_ENDPOINT_SECRET;

@@ -20,7 +20,7 @@ const uploadOnCloudinary = async (localFilePath) => {
             return null;
         }
 
-        const response = await cloudinary.uploader.upload(localFilePath, { resource_type: "auto" });
+        const response = await cloudinary.uploader.upload(localFilePath, { resource_type: "auto", secure: true });
 
         console.log("Deleting local file:", localFilePath);
         if (fs.existsSync(localFilePath)) {
