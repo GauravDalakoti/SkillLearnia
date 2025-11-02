@@ -424,7 +424,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                         {!isSelected && (
                             <div className="flex flex-col gap-4 border border-slate-300 rounded-lg p-4 bg-indigo-50 w-full sm:w-[50vw] shadow-sm">
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                                    <div className="flex gap-3 items-center">
+                                    <div className="flex gap-3 items-center max-lg:flex-col">
                                         <div className="font-semibold text-indigo-900">Lecture 1</div>
                                         <input
                                             className="text-sm outline-none border border-indigo-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400 w-full sm:w-auto"
