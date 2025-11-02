@@ -51,6 +51,9 @@ const CourseSetting = ({ isEdit, courseId, courseImage, onFileChange }) => {
 
         method: "POST",
         credentials: "include",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+        },
         body: formData
       })
 
@@ -87,7 +90,7 @@ const CourseSetting = ({ isEdit, courseId, courseImage, onFileChange }) => {
             <div className='flex justify-between items-center max-lg:flex-col max-lg:gap-4'>
               <div
                 className='text-2xl font-bold text-indigo-700 cursor-pointer hover:underline'
-               
+
               >
                 Course Settings
               </div>
@@ -128,7 +131,7 @@ const CourseSetting = ({ isEdit, courseId, courseImage, onFileChange }) => {
 
               <div
                 className='text-2xl font-bold text-indigo-700 cursor-pointer hover:underline'
-                
+
               >
                 Course Settings
               </div>
