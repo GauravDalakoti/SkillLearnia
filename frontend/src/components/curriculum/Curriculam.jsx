@@ -285,14 +285,14 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                             className="flex flex-col gap-4 border border-slate-300 rounded-lg p-4 bg-indigo-50 shadow"
                         >
                             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 w-full sm:w-[50vw]">
-                                <div className="flex gap-3 items-center w-full">
+                                <div className="flex gap-3 items-center w-full max-lg:flex-col">
                                     <div className="font-semibold text-indigo-900">
                                         Lecture {index + 1}
                                     </div>
                                     <input
                                         onChange={(e) => handleLectureTitle(index, e)}
                                         value={lecture.title}
-                                        className="flex-1 text-sm outline-none border border-indigo-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
+                                        className="flex-1 text-sm max-lg:w-[60vw] outline-none border border-indigo-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
                                         type="text"
                                         placeholder="Enter Lecture Title"
                                         required
