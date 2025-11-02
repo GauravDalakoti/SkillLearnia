@@ -11,8 +11,6 @@ const CourseDetail = () => {
 
   const [course, setcourse] = useState({});
 
- 
-
   useEffect(() => {
 
     (async () => {
@@ -66,9 +64,9 @@ const CourseDetail = () => {
           method: "POST",
           credentials: "include",
           headers: {
-
-            "Content-Type": "application/json"
-          },
+                "Content-type": "application/json",
+                'Authorization': `Bearer ${localStorage.getItem("userToken")}`
+            },
           body: JSON.stringify({ courseId })
         })
 
