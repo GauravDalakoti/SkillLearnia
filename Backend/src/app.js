@@ -13,6 +13,7 @@ app.use(cors(
     {
         credentials: true,
         origin: process.env.CORS_ORIGIN,
+        allowedHeaders: ["Content-Type", "Authorization"],
         method: ["GET", "POST", "DELETE", "PATCH"]
     }
 ))
@@ -35,6 +36,6 @@ app.use("/api/v1/curriculam", curriculamRoutes)
 app.use("/api/v1/lecture", lectureRoutes)
 
 //coursePurchase route
-app.use("/api/v1/purchase",coursePurchase)
+app.use("/api/v1/purchase", coursePurchase)
 
 export { app }
