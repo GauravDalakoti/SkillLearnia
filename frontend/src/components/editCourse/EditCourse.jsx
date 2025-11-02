@@ -46,7 +46,6 @@ const EditCourse = () => {
                 if (response.ok) {
 
                     const res = await response.json();
-                    console.log(res)
                     setCurrentCourse(res.data[0])
                     dispatch(setAllLectures(res.data.Lectures))
 
@@ -103,7 +102,7 @@ const EditCourse = () => {
                     method: "POST",
                     credentials: "include",
                     headers: {
-                         Authorization: `Bearer ${localStorage.getItem("instructorToken")}`
+                         "Authorization": `Bearer ${localStorage.getItem("instructorToken")}`
                     },
                     body: formData
                 })

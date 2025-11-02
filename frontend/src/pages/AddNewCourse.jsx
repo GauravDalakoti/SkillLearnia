@@ -61,7 +61,7 @@ const AddNewCourse = () => {
                     credentials: "include",
                     headers: {
 
-                        Authorization: `Bearer ${localStorage.getItem("instructorToken")}`
+                        "Authorization": `Bearer ${localStorage.getItem("instructorToken")}`
                     },
                     body: formData
                 })

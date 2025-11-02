@@ -52,7 +52,7 @@ const CourseSetting = ({ isEdit, courseId, courseImage, onFileChange }) => {
         method: "POST",
         credentials: "include",
         headers: {
-          Authorization: `Bearer ${localStorage.getItem("instructorToken")}`
+          "Authorization": `Bearer ${localStorage.getItem("instructorToken")}`
         },
         body: formData
       })

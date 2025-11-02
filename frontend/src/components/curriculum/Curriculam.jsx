@@ -137,7 +137,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                 method: "POST",
                 credentials: "include",
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("instructorToken")}`
+                    "Authorization": `Bearer ${localStorage.getItem("instructorToken")}`
                 },
                 body: formData
             })
@@ -176,7 +176,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                 method: "POST",
                 credentials: "include",
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("instructorToken")}`
+                    "Authorization": `Bearer ${localStorage.getItem("instructorToken")}`
 
                 },
                 body: formData
