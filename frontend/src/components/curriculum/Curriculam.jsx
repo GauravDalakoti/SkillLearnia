@@ -150,6 +150,9 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                 dispatch(setAllApiLectures(res.data.Lectures))
                 setLoading(false)
             }
+            else {
+                setLoading(false)
+            }
 
         } catch (error) {
 
@@ -187,6 +190,9 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                 toast.success("new lecture added Successfully")
                 const res = await response.json();
                 dispatch(setAllApiLectures(res.data.Lectures))
+                setLoading(false)
+            }
+            else {
                 setLoading(false)
             }
 
