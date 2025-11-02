@@ -18,6 +18,10 @@ const DashBoard = () => {
         {
           method: "GET",
           credentials: "include",
+          headers: {
+            "Content-type": "application/json",
+            'Authorization': `Bearer ${localStorage.getItem("instructorToken")}`
+          }
         }
       );
 

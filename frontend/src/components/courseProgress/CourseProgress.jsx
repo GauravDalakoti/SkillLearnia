@@ -53,6 +53,7 @@ const CourseProgress = () => {
         {
           method: "POST",
           credentials: "include",
+          
         }
       );
 

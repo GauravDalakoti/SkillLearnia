@@ -96,6 +96,10 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
 
                 method: "DELETE",
                 credentials: "include",
+                headers: {
+                    "Content-type": "application/json",
+                    'Authorization': `Bearer ${localStorage.getItem("instructorToken")}`
+                }
             })
 
             if (response.ok) {
@@ -104,7 +108,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                 toast.success("lecture deleted Successfully")
                 const res = await response.json();
                 dispatch(setAllApiLectures(res.data.Lectures))
-                
+
             }
 
         } catch (error) {
@@ -198,10 +202,10 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                 method: "POST",
                 credentials: "include",
                 headers: {
-
-                    "Content-Type": "application/json"
+                    "Content-type": "application/json",
+                    'Authorization': `Bearer ${localStorage.getItem("instructorToken")}`
                 },
-                body: JSON.stringify({allLectures})
+                body: JSON.stringify({ allLectures })
             })
 
             if (response.ok) {
@@ -235,7 +239,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                         Update Course Curriculum
                     </h1>
 
-                   
+
                 </div>
 
                 {/* Add Lecture Button */}
@@ -460,7 +464,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                                                     type="video/mp4"
                                                 />
                                             </video>
-                                           
+
                                         </div>
                                     </div>
                                 ))}

@@ -27,8 +27,8 @@ const InstructorAllCourses = () => {
         method: "POST",
         credentials: "include",
         headers: {
-
-          "Content-Type": "application/json"
+          "Content-type": "application/json",
+          'Authorization': `Bearer ${localStorage.getItem("instructorToken")}`
         },
         body: JSON.stringify({ currentCourseId })
       })
@@ -58,9 +58,9 @@ const InstructorAllCourses = () => {
           method: "GET",
           credentials: "include",
           headers: {
-
-            "Content-Type": "application/json"
-          },
+            "Content-type": "application/json",
+            'Authorization': `Bearer ${localStorage.getItem("instructorToken")}`
+          }
         })
 
         if (response.ok) {
@@ -164,7 +164,7 @@ const InstructorAllCourses = () => {
               }
             </div>
           )}
-      
+
         </div>
       </div>
 

@@ -32,8 +32,8 @@ const CourseLandingPage = ({ isEdit, courseId, currentCourse }) => {
                 method: "POST",
                 credentials: "include",
                 headers: {
-
-                    "Content-Type": "application/json"
+                    "Content-type": "application/json",
+                    'Authorization': `Bearer ${localStorage.getItem("instructorToken")}`
                 },
                 body: JSON.stringify(courseDetails)
             })
@@ -43,7 +43,7 @@ const CourseLandingPage = ({ isEdit, courseId, currentCourse }) => {
                 setLoading(false)
                 toast.success("course details Updated Succussfully")
                 const res = await response.json();
-               
+
             }
 
         } catch (error) {
@@ -67,8 +67,8 @@ const CourseLandingPage = ({ isEdit, courseId, currentCourse }) => {
                         method: "POST",
                         credentials: "include",
                         headers: {
-
-                            "Content-Type": "application/json"
+                            "Content-type": "application/json",
+                            'Authorization': `Bearer ${localStorage.getItem("instructorToken")}`
                         },
                         body: JSON.stringify({ courseId })
                     })
@@ -76,9 +76,9 @@ const CourseLandingPage = ({ isEdit, courseId, currentCourse }) => {
                     if (response.ok) {
 
                         const res = await response.json();
-                       
+
                         dispatch(setAllCourseDetails(res.data))
-                       
+
                     }
 
                 } catch (error) {

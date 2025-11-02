@@ -37,8 +37,8 @@ const EditCourse = () => {
                     method: "POST",
                     credentials: "include",
                     headers: {
-
-                        "Content-Type": "application/json"
+                        "Content-type": "application/json",
+                        'Authorization': `Bearer ${localStorage.getItem("instructorToken")}`
                     },
                     body: JSON.stringify({ _id })
                 })
@@ -136,7 +136,7 @@ const EditCourse = () => {
 
                         <div className='flex justify-between mb-3'>
                             <h1 className='text-xl font-extrabold'>Edit Course</h1>
-                           
+
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-6 border-2 border-slate-300 rounded-xl bg-slate-50 px-3 sm:px-4 py-3 w-full sm:w-fit shadow-sm">
