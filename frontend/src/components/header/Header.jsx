@@ -80,7 +80,10 @@ const Header = () => {
     try {
       const response = await fetch(
         `${import.meta.env.VITE_BACKEND_URI}/api/v1/user/logout-user`,
-        { method: "GET", credentials: "include" }
+        { method: "GET", credentials: "include", headers: {
+                "Content-type": "application/json",
+                'Authorization': `Bearer ${localStorage.getItem("userToken")}`
+            } }
       );
       if (response.ok) {
         const res = await response.json();
