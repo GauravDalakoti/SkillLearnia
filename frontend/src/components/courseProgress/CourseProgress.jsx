@@ -20,9 +20,9 @@ const CourseProgress = () => {
           {
             method: "GET",
             credentials: "include",
-             headers: {
-                "Content-type": "application/json",
-                'Authorization': `Bearer ${localStorage.getItem("userToken")}`
+            headers: {
+              "Content-type": "application/json",
+              'Authorization': `Bearer ${localStorage.getItem("userToken")}`
             },
           }
         );
@@ -53,13 +53,17 @@ const CourseProgress = () => {
         {
           method: "POST",
           credentials: "include",
-          
+          headers: {
+            "Content-type": "application/json",
+            'Authorization': `Bearer ${localStorage.getItem("userToken")}`
+          },
+
         }
       );
 
       if (response.ok) {
         const res = await response.json();
-        
+
       }
     } catch (error) {
       console.log("Error while updating lecture status:", error);
