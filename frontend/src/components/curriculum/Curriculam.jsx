@@ -462,7 +462,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                                                 <input
                                                     onChange={(e) => handleLectureTitle(index, e)}
                                                     value={lecture.title}
-                                                    className="flex-1 text-sm outline-none border border-indigo-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
+                                                    className="flex-1 text-sm max-lg:w-[60vw] outline-none border border-indigo-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
                                                     type="text"
                                                     placeholder="Enter Lecture Title"
                                                     required
@@ -499,7 +499,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                                                 </div>
                                                 <input
                                                     value={curlecture.title}
-                                                    className="flex-1 text-sm outline-none border border-indigo-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
+                                                    className="flex-1 text-sm max-lg:w-[60vw] outline-none border border-indigo-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-indigo-400"
                                                     type="text"
                                                     placeholder="Enter Lecture Title"
                                                     required
