@@ -455,7 +455,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                                         className="flex flex-col gap-4 border border-slate-300 rounded-lg p-4 bg-indigo-50 shadow"
                                     >
                                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 w-full sm:w-[50vw]">
-                                            <div className="flex gap-3 items-center w-full">
+                                            <div className="flex gap-3 items-center w-full max-lg:flex-col">
                                                 <div className="font-semibold text-indigo-900">
                                                     Lecture {index + 1}
                                                 </div>
@@ -493,7 +493,7 @@ const Curriculam = ({ isEdit, courseId, lectures }) => {
                                         className="flex flex-col gap-4 border border-slate-300 rounded-lg p-4 bg-indigo-50 shadow"
                                     >
                                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 w-full sm:w-[50vw]">
-                                            <div className="flex gap-3 items-center w-full">
+                                            <div className="flex gap-3 items-center w-full max-lg:flex-col">
                                                 <div className="font-semibold text-indigo-900">
                                                     Lecture {index + 1}
                                                 </div>
