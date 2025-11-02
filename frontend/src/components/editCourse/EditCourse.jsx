@@ -103,7 +103,7 @@ const EditCourse = () => {
                     method: "POST",
                     credentials: "include",
                     headers: {
-                        Authorization: `Bearer ${localStorage.getItem("userToken")}`,
+                         Authorization: `Bearer ${localStorage.getItem("instructorToken")}`
                     },
                     body: formData
                 })
